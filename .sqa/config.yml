@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    codebase.helmholtz.cloud/esis/Imalys:
+      branch: main
+      repo: https://codebase.helmholtz.cloud/esis/Imalys
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.13
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      codebase.helmholtz.cloud/esis/Imalys git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-saffron-heron.sh
+        container: qc.acc_sickly-jade-spider
+  QC.Doc:
+    repos:
+      codebase.helmholtz.cloud/esis/Imalys find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-lavender-whippet.sh
+        container: qc.doc_stinky-black-stoat
+      codebase.helmholtz.cloud/esis/Imalys git:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-taupe-dolphin.sh
+        container: qc.doc_slaphappy-razzmatazz-sponge
+      codebase.helmholtz.cloud/esis/Imalys markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-tangerine-wildebeest.sh
+        container: qc.doc_blurry-heliotrope-uakari
+  QC.Lic:
+    repos:
+      codebase.helmholtz.cloud/esis/Imalys licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-amaranth-cuttlefish.sh
+        container: qc.lic_baggy-heliotrope-shrimp
+  QC.Met:
+    repos:
+      codebase.helmholtz.cloud/esis/Imalys cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-aqua-yak.sh
+        container: qc.met_leaky-turquoise-centipede
+  QC.Ver:
+    repos:
+      codebase.helmholtz.cloud/esis/Imalys get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-teal-butterfly.sh
+        container: qc.ver_clammy-rose-maltese
+timeout: 5400
