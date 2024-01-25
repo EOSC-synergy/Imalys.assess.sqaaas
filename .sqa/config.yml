@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://codebase.helmholtz.cloud/esis/Imalys
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.13
+      branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,38 +15,28 @@ sqa_criteria:
     repos:
       codebase.helmholtz.cloud/esis/Imalys git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-saffron-heron.sh
-        container: qc.acc_sickly-jade-spider
+        - /usr/bin/env sh .sqa/script.sunny-taupe-termite.sh
+        container: qc.acc_craggy-saffron-paradise
   QC.Doc:
     repos:
       codebase.helmholtz.cloud/esis/Imalys find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-lavender-whippet.sh
-        container: qc.doc_stinky-black-stoat
+        - /usr/bin/env sh .sqa/script.bumpy-puce-maltese.sh
+        container: qc.doc_skimpy-beige-budgerigar
       codebase.helmholtz.cloud/esis/Imalys git:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-taupe-dolphin.sh
-        container: qc.doc_slaphappy-razzmatazz-sponge
-      codebase.helmholtz.cloud/esis/Imalys markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.wimpy-tangerine-wildebeest.sh
-        container: qc.doc_blurry-heliotrope-uakari
+        - /usr/bin/env sh .sqa/script.nippy-ochre-hyena.sh
+        container: qc.doc_chewy-yellow-dunker
   QC.Lic:
     repos:
       codebase.helmholtz.cloud/esis/Imalys licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-amaranth-cuttlefish.sh
-        container: qc.lic_baggy-heliotrope-shrimp
-  QC.Met:
-    repos:
-      codebase.helmholtz.cloud/esis/Imalys cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.baggy-aqua-yak.sh
-        container: qc.met_leaky-turquoise-centipede
+        - /usr/bin/env sh .sqa/script.foggy-razzmatazz-kudu.sh
+        container: qc.lic_shaggy-buff-tarsier
   QC.Ver:
     repos:
       codebase.helmholtz.cloud/esis/Imalys get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-teal-butterfly.sh
-        container: qc.ver_clammy-rose-maltese
+        - /usr/bin/env sh .sqa/script.lovely-celadon-flamingo.sh
+        container: qc.ver_slimy-platinum-zebra
 timeout: 5400
