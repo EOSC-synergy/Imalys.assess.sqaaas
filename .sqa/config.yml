@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       codebase.helmholtz.cloud/esis/Imalys git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-taupe-termite.sh
-        container: qc.acc_craggy-saffron-paradise
+        - /usr/bin/env sh .sqa/script.sunny-champagne-cockroach.sh
+        container: qc.acc_freaky-plum-ray
   QC.Doc:
     repos:
       codebase.helmholtz.cloud/esis/Imalys find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-puce-maltese.sh
-        container: qc.doc_skimpy-beige-budgerigar
+        - /usr/bin/env sh .sqa/script.homey-tomato-salamander.sh
+        container: qc.doc_ready-coral-mouse
       codebase.helmholtz.cloud/esis/Imalys git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-ochre-hyena.sh
-        container: qc.doc_chewy-yellow-dunker
+        - /usr/bin/env sh .sqa/script.freaky-denim-walrus.sh
+        container: qc.doc_flabby-harlequin-havanese
   QC.Lic:
     repos:
       codebase.helmholtz.cloud/esis/Imalys licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-razzmatazz-kudu.sh
-        container: qc.lic_shaggy-buff-tarsier
+        - /usr/bin/env sh .sqa/script.scaly-ecru-urchin.sh
+        container: qc.lic_shabby-peach-olm
   QC.Ver:
     repos:
       codebase.helmholtz.cloud/esis/Imalys get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-celadon-flamingo.sh
-        container: qc.ver_slimy-platinum-zebra
+        - /usr/bin/env sh .sqa/script.skinny-azure-sparrow.sh
+        container: qc.ver_chummy-amaranth-dingo
 timeout: 5400
